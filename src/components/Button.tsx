@@ -1,5 +1,11 @@
 import React from "react";
 
-export const Button = () => {
-  return <div>Buttonnnnnnnnnnnnnnnnnnnnn</div>;
+const Button = () => {
+  return (
+    <input type="button" onClick={() => alert("holaaaa")}>
+      HOLA
+    </input>
+  );
 };
+
+export default Button;
