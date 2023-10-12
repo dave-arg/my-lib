@@ -1,11 +1,11 @@
 import React from "react";
 
-const Button = () => {
-  return (
-    <input type="button" onClick={() => alert("holaaaa")}>
-      HOLA
-    </input>
-  );
+export interface ButtonProps {
+  label: string;
+}
+
+const Button = ({ label }: ButtonProps) => {
+  return <button onClick={() => alert("holaaaaaa")}>{label}</button>;
 };
 
 export default Button;
