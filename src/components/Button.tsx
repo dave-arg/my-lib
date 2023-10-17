@@ -1,19 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { ResponsiveValue, WidthProps, width } from "styled-system";
 
 export interface ButtonProps {
   label: string;
+  width: ResponsiveValue<string>;
 }
 
-const StyledButton = styled.button({
+const StyledButton = styled.button<WidthProps>(width, {
   backgroundColor: "red",
   color: "white",
   padding: "16px ",
 });
 
-const Button = ({ label }: ButtonProps) => {
+const Button = ({ label, width }: ButtonProps) => {
   return (
-    <StyledButton onClick={() => alert("el click anda")}>{label}</StyledButton>
+    <StyledButton width={width} onClick={() => alert("el click anda")}>
+      {label}
+    </StyledButton>
   );
 };
 

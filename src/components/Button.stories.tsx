@@ -18,5 +18,5 @@ type Story = StoryObj<typeof Button>;
  * to learn how to use render functions.
  */
 export const Primary: Story = {
-  render: () => <Button label="ejemplo" />,
+  render: () => <Button label="ejemplo" width={["33%", "50%", "100%"]} />,
 };
