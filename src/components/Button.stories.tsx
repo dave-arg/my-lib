@@ -1,5 +1,3 @@
-// Button.stories.ts|tsx
-
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Button from "./Button";
@@ -12,11 +10,15 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
 export const Primary: Story = {
-  render: () => <Button label="ejemplo" width={["33%", "50%", "100%"]} />,
+  render: () => (
+    <Button
+      width={["33%", "50%", "100%"]}
+      color="white"
+      backgroundColor={"gray"}
+      onClick={() => alert("vamos menem")}
+    >
+      sdsdgsdfgsdg
+    </Button>
+  ),
 };

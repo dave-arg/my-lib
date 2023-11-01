@@ -1,24 +1,55 @@
 import React from "react";
 import styled from "styled-components";
-import { ResponsiveValue, WidthProps, width } from "styled-system";
+import {
+  WidthProps,
+  BackgroundProps,
+  background,
+  width,
+  ColorProps,
+  color,
+  fontSize,
+  lineHeight,
+  FontSizeProps,
+  LineHeightProps,
+  PaddingProps,
+  padding,
+  margin,
+  MarginProps,
+  HeightProps,
+  height,
+} from "styled-system";
 
-export interface ButtonProps {
-  label: string;
-  width: ResponsiveValue<string>;
-}
+type ButtonProps = WidthProps &
+  BackgroundProps &
+  ColorProps &
+  FontSizeProps &
+  LineHeightProps &
+  PaddingProps &
+  MarginProps &
+  HeightProps & { border?: string };
 
-const StyledButton = styled.button<WidthProps>(width, {
-  backgroundColor: "red",
-  color: "white",
-  padding: "16px ",
-});
-
-const Button = ({ label, width }: ButtonProps) => {
-  return (
-    <StyledButton width={width} onClick={() => alert("el click anda")}>
-      {label}
-    </StyledButton>
-  );
-};
+const Button = styled.button<ButtonProps>(
+  width,
+  height,
+  background,
+  color,
+  fontSize,
+  lineHeight,
+  padding,
+  margin,
+  (props: ButtonProps) => ({
+    border: props.border === undefined ? "none" : props.border,
+  }),
+  {
+    lineHeight: "inherit",
+    fontSize: "inherit",
+    padding: "8px",
+    borderRadius: "3px 8px 3px 8px",
+    ":hover": {
+      opacity: 0.8,
+      cursor: "pointer",
+    },
+  }
+);
 
 export default Button;
