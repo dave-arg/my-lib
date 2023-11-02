@@ -11,18 +11,9 @@ export default meta;
 type Story = StoryObj<typeof Box>;
 
 export const Primary: Story = {
-  render: () => (
-    <Box
-      padding={"30px"}
-      width={["33%", "50%", "100%"]}
-      backgroundColor={"red"}
-      display={"flex"}
-      flexDirection={"row"}
-      justifyContent={"space-between"}
-    >
-      <div> hola</div>
-      <div> hola</div>
-      <div> hola</div>
-    </Box>
-  ),
+  args: {
+    backgroundColor: "#25B4BDFF",
+    width: "200px",
+    height: "200px",
+  },
 };

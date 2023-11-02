@@ -13,6 +13,7 @@ const Destacado = ({ padding }: DestacadoProps) => {
       width={"100%"}
       height={"230px"}
       padding={padding}
+      maxWidth={"max-content"}
     >
       <Box
         backgroundColor={"white"}

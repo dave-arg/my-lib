@@ -17,7 +17,7 @@ export const Primary: Story = {
       fontSize={"24px"}
       fontWeight={"bold"}
     >
-      holaaaaaaaaaaaaa
+      holaaaaa
     </Text>
   ),
 };

@@ -11,14 +11,18 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
-  render: () => (
-    <Button
-      width={["33%", "50%", "100%"]}
-      color="white"
-      backgroundColor={"gray"}
-      onClick={() => alert("vamos menem")}
-    >
-      sdsdgsdfgsdg
-    </Button>
-  ),
+  args: {
+    backgroundColor: "#3c3c3b",
+  },
 };
+
+Primary.render = (args) => (
+  <Button
+    width={["33%", "50%", "fit-content"]}
+    color="white"
+    backgroundColor={args.backgroundColor}
+    onClick={() => alert("vamos menem")}
+  >
+    Boton de ejemplo
+  </Button>
+);
